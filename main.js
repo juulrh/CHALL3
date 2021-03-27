@@ -10,24 +10,24 @@ var map = new mapboxgl.Map({
 });
 map.addControl(new mapboxgl.NavigationControl());
 
-var locaties =
-[
-  {
-    name: 'Locatie1',
-    coordinates: [6.533258519883534, 53.17623958958595]
-  },
-  {
-    name: 'Locatie2',
-    coordinates: [6.532124211489161, 53.17898595511805]
-  },
-  {
-  name: 'Locatie2',
-  coordinates: [6.528951936075846.177432120463465]
-},
-];
+// var locaties =
+// [
+//   {
+//     name: 'Locatie1',
+//     coordinates: [6.533258519883534, 53.17623958958595]
+//   },
+//   {
+//     name: 'Locatie2',
+//     coordinates: [6.532124211489161, 53.17898595511805]
+//   },
+//   {
+//   name: 'Locatie2',
+//   coordinates: [6.528951936075846.177432120463465]
+// },
+// ];
 
 map.on('load', function () {
-  locaties.forEach(function(locaties) {
+//  locaties.forEach(function(locaties) {
 
 
   // laad een extern bestand
@@ -46,7 +46,7 @@ map.loadImage('images/flag.png', function (error, image){
             type: 'Feature',
             geometry: {
               type: 'Point',
-              coordinates: locaties.coordinates
+              coordinates: [6.533258519883534, 53.17623958958595]
             }
           }]
         }
