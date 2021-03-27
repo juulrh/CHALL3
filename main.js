@@ -33,19 +33,6 @@ map.loadImage('images/flag.png', function (error, image){
           }]
         }
       });
-      map.addSource('point', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [6.532124211489161, 53.17898595511805]
-            }
-          }]
-        }
-      });
       // plak de nieuwe source 'point' op de kaart in een eigen layer
       map.addLayer({
         id: 'points',
