@@ -14,7 +14,7 @@ map.on('load', function () {
 
   // laad een extern bestand
  //map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function (error, image) {
-//map.loadImage('https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_icon_darkblue.svg', function (error, image) {
+//map.loadImage('https://upload.wikimedia.org/wikipedia/commons/5/54/Dialog-accept.svg', function (error, image) {
 map.loadImage('images/flag.png', function (error, image){
       // voeg image toe en noem het cat
      map.addImage('flag', image);
@@ -41,7 +41,7 @@ map.loadImage('images/flag.png', function (error, image){
         source: 'point',
         layout: {
           'icon-image': 'flag',
-          'icon-size': 0.25
+         'icon-size': 0.5
         }
       });
     }
