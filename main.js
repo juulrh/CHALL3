@@ -10,25 +10,9 @@ var map = new mapboxgl.Map({
 });
 map.addControl(new mapboxgl.NavigationControl());
 
-// var locaties =
-// [
-//   {
-//     name: 'Locatie1',
-//     coordinates: [6.533258519883534, 53.17623958958595]
-//   },
-//   {
-//     name: 'Locatie2',
-//     coordinates: [6.532124211489161, 53.17898595511805]
-//   },
-//   {
-//   name: 'Locatie2',
-//   coordinates: [6.528951936075846.177432120463465]
-// },
-// ];
+
 
 map.on('load', function () {
-//  locaties.forEach(function(locaties) {
-
 
   // laad een extern bestand
  //map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function (error, image) {
@@ -50,7 +34,6 @@ map.loadImage('images/flag.png', function (error, image){
             }
           }]
         }
-        });
       });
       // plak de nieuwe source 'point' op de kaart in een eigen layer
       map.addLayer({
