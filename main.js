@@ -27,6 +27,8 @@ var locaties =
 ];
 
 map.on('load', function () {
+  locaties.forEach(function(locaties) {
+
 
   // laad een extern bestand
  //map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function (error, image) {
@@ -48,6 +50,7 @@ map.loadImage('images/flag.png', function (error, image){
             }
           }]
         }
+        });
       });
       // plak de nieuwe source 'point' op de kaart in een eigen layer
       map.addLayer({
