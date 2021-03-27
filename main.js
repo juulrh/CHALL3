@@ -41,7 +41,7 @@ map.loadImage('images/flag.png', function (error, image){
         source: 'point',
         layout: {
           'icon-image': 'flag',
-         'icon-size': 0.5
+         'icon-size': 0.25
         }
       });
     }
