@@ -1,5 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoianV1bHJoIiwiYSI6ImNrbWx0cXBkajA5Ym0ycGx3NGQxa2Q2ZTgifQ.3qb02-PYSz_d6fgTyY8p5w';
 
+//VAR LOCATIES MET COORDINATEN
 var locaties = [{
     type: 'Feature',
     properties: {
@@ -24,7 +25,7 @@ var locaties = [{
   },
 ];
 
-// Initialate map
+// DE MAPS
 var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/juulrh/ckmlxucqgfqfk17qyr6gxvnc2',
@@ -32,20 +33,19 @@ var map = new mapboxgl.Map({
   zoom: 13
 
 });
+
+//CONTROL BAR RECHTS BOVEN
 map.addControl(new mapboxgl.NavigationControl());
-
-
 
 map.on('load', function () {
 
-  // laad een extern bestand
+  // EXTERN BESTAND
  //map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function (error, image) {
-//map.loadImage('https://upload.wikimedia.org/wikipedia/commons/5/54/Dialog-accept.svg', function (error, image) {
 map.loadImage('images/flag.png', function (error, image){
-      // voeg image toe en noem het cat
+      // VOEG IMAGE TOE
      map.addImage('flag', image);
 
-      // defineer een punt in het geheugen
+      // PUNT IN GEHEUGEN
       map.addSource('point', {
         type: 'geojson',
         data: {
@@ -53,7 +53,7 @@ map.loadImage('images/flag.png', function (error, image){
          features: locaties
         }
       });
-      // plak de nieuwe source 'point' op de kaart in een eigen layer
+      // NIEUWE SOURCE POINT OP MAPS
       map.addLayer({
         id: 'points',
         type: 'symbol',
@@ -67,4 +67,4 @@ map.loadImage('images/flag.png', function (error, image){
   );
 });
 
-            // ICON UITROEPS  coordinates: [6.558267009864895, 53.17932862664539]
+            // ICON UITROEPS coordinates: [6.558267009864895, 53.17932862664539]
