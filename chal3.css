@@ -1,12 +1,12 @@
 body {
   margin: 5vh 5vw;
   background: #141531;
+  color: white;
+  font-family: poppins;
+
 }
 
 h1 {
-  font-family: poppins;
-  color: white;
-  font-size: 40px;
   text-align: center;
 }
 
@@ -14,3 +14,7 @@ h1 {
   height: 60vh;
   width: 60vw;
 }
+
+#weer {
+  margin-left: 800px;
+  margin-top: -400px;
