@@ -1,5 +1,29 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoianV1bHJoIiwiYSI6ImNrbWx0cXBkajA5Ym0ycGx3NGQxa2Q2ZTgifQ.3qb02-PYSz_d6fgTyY8p5w';
 
+var locaties = [{
+    type: 'Feature',
+    properties: {
+      description: '<p>Goede plek om te landen</p>',
+      icon: 'flag'
+    },
+    geometry: {
+      type: 'Point',
+      coordinates: [6.533258519883534, 53.17623958958595]
+    },
+  },
+  {
+    type: 'Feature',
+    properties: {
+      description: '<p>Goede plek om te landen</p>',
+      icon: 'flag'
+    },
+    geometry: {
+      type: 'Point',
+      coordinates: [6.5159615333312315, 53.1797266170132]
+    }
+  },
+];
+
 // Initialate map
 var map = new mapboxgl.Map({
   container: 'map',
@@ -26,13 +50,15 @@ map.loadImage('images/flag.png', function (error, image){
         type: 'geojson',
         data: {
           type: 'FeatureCollection',
-          features: [{
-            type: 'Feature',
-            geometry: {
-              type: 'Point',
-              coordinates: [6.533258519883534, 53.17623958958595]
-            }
-          }]
+         features: locaties
+          //[{
+          //   type: 'Feature',
+          //   geometry: {
+          //     type: 'Point',
+          //     coordinates: [6.533258519883534, 53.17623958958595]
+          //   //  coordinates: [6.5159615333312315, 53.1797266170132]
+          //   }
+          // }]
         }
       });
       // plak de nieuwe source 'point' op de kaart in een eigen layer
@@ -42,7 +68,7 @@ map.loadImage('images/flag.png', function (error, image){
         source: 'point',
         layout: {
           'icon-image': 'flag',
-         'icon-size': 0.25
+         'icon-size': 0.18
         }
       });
     }
