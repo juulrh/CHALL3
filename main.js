@@ -66,40 +66,5 @@ map.loadImage('images/flag.png', function (error, image){
     }
   );
 });
-map.on('load', function () {
 
-  // laad een extern bestand
- //map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function (error, image) {
-//map.loadImage('https://upload.wikimedia.org/wikipedia/commons/5/54/Dialog-accept.svg', function (error, image) {
-map.loadImage('images/pasop.png', function (error, image){
-      // voeg image toe en noem het cat
-     map.addImage('pasop', image);
-
-      // defineer een punt in het geheugen
-      map.addSource('point', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: [{
-            type: "Feature",
-            geometry: {
-              type: "Point",
-              coordinates: [6.558267009864895, 53.17932862664539]
-            }
-          }]
-         //features: locaties
-        }
-      });
-      // plak de nieuwe source 'point' op de kaart in een eigen layer
-      map.addLayer({
-        id: 'points',
-        type: 'symbol',
-        source: 'point',
-        layout: {
-          'icon-image': 'pasop',
-         'icon-size': 0.18
-        }
-      });
-    }
-  );
-});
+            // ICON UITROEPS  coordinates: [6.558267009864895, 53.17932862664539]
